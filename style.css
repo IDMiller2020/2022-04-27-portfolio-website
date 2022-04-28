@@ -20,23 +20,20 @@ html {
 
 body {
   margin: 0;
-}
-
-header {
-  position: relative;
-  background-image: url(./images/laptop-banner.jpg);
-  overflow: hidden;
-  background-position: center;
-  background-size: cover;
-  height: 300px;
+  font-family: 'Akshar';
 }
 
 #banner {
-  height: 100%;
+  position: relative;
+  background-image: url(./images/laptop-banner.jpg);
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
   z-index: 0;
 }
 
@@ -63,4 +60,31 @@ h2 {
   font-size: 2rem;
   color: hsla(180, 100%, 75%, 1);
   z-index: 2;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 30px;
+
+  box-shadow: 0 1px 5px 1px hsla(0, 0%, 50%, .5);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: flex;
+  position: relative;
+  white-space: nowrap;
+  float: left;
+  margin-left: 50px;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 0.75rem;
 }

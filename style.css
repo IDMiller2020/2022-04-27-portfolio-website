@@ -26,7 +26,7 @@ body {
 #banner {
   /* position: relative; */
   /* background-image: url(./images/laptop-banner.jpg); */
-  background-image: url(./images/cover.png);
+  background-image: url(./images/default-narrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -83,6 +83,14 @@ li a {
   font-size: 0.75rem;
 }
 
+#nav-menu {
+  display: none;
+}
+
+#nav-menu li {
+  display: inline;
+}
+
 #about-me {
   display: flex;
   flex-direction: column;
@@ -124,3 +132,11 @@ li a {
   justify-items: center;
 }
 
+@media only screen and (min-width: 500px) {
+  #menu-open {
+    display: none;
+  }
+  #nav-menu {
+    display: unset;
+  }
+}

@@ -24,28 +24,12 @@ body {
 }
 
 #banner {
-  /* position: relative; */
-  /* background-image: url(./images/laptop-banner.jpg); */
   background-image: url(./images/default-narrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 140px;
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: center;
-  justify-content: center;
-  overflow: hidden; */
+  height: 250px;
   z-index: 0;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  background-color: hsla(0, 0%, 0%, 0.7);
-  height: 100%;
-  width: 100%;
-  z-index: 1;
 }
 
 h1 {
@@ -99,7 +83,7 @@ li a {
   font-size: 0.75rem;
 }
 
-section {
+#about-me {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,3 +110,17 @@ section {
 .about-me-text p{
   font-size: 0.75rem;;
 }
+
+#skills {
+  display: flex;
+  justify-content: center;
+}
+
+#badges {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+

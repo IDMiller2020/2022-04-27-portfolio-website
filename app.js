@@ -1,5 +1,6 @@
 const navMenu = document.getElementById('menu-open')
 const navClose = document.getElementById('menu-close')
+const linkClickClose = document.getElementById('nav-list')
 const navDropDownMenu = document.getElementById('drop-down-menu')
 let showMenu = false
 function toggleNavMenu () {
@@ -12,3 +13,4 @@ function toggleNavMenu () {
 }
 navMenu.addEventListener('click', toggleNavMenu)
 navClose.addEventListener('click', toggleNavMenu)
+linkClickClose.addEventListener('click', toggleNavMenu)

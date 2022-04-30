@@ -132,6 +132,16 @@ li a {
   justify-items: center;
 }
 
+#resume {
+  display: flex;
+  justify-content: center;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
 footer {
   background-color: rgb(191, 191, 191);
   display: grid;

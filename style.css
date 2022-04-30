@@ -132,6 +132,25 @@ li a {
   justify-items: center;
 }
 
+footer {
+  background-color: rgb(191, 191, 191);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 20px;
+}
+
+#footer-logo {
+  background-image: url('./images/default-wide.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#footer-contact {
+  justify-self: center;
+  font-size: 0.75rem;
+}
+
 @media only screen and (min-width: 500px) {
   #menu-open {
     display: none;

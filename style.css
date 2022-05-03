@@ -30,6 +30,7 @@ body {
   background-size: cover;
   height: 250px;
   z-index: 0;
+  background-color: #111f51;
 }
 
 h1 {
@@ -58,11 +59,11 @@ nav {
   box-shadow: 0 1px 5px 1px hsla(0, 0%, 50%, .5);
 }
 
-#menu-open, #menu-close, li {
+nav #menu-open, #menu-close, li {
   margin: 7px;
 }
 
-#drop-down-menu {
+nav #drop-down-menu {
   display: none;
   background-color: white;
   height: 200px;
@@ -78,7 +79,7 @@ nav ul {
   margin: 0;
 }
 
-li a {
+nav li a {
   text-decoration: none;
   font-size: 0.75rem;
 }
@@ -104,24 +105,24 @@ li a {
   align-items: center;
 }
 
-.portrait-container {
+#about-me .portrait-container {
   width: 80%;
   height: 250px;
   overflow: hidden;
   margin-top: 16px;
 }
 
-.portrait-container img {
+#about-me .portrait-container img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-.about-me-text {
+#about-me .about-me-text {
   width: 80%
 }
 
-.about-me-text p{
+#about-me .about-me-text p{
   font-size: 0.75rem;;
 }
 
@@ -130,13 +131,25 @@ li a {
   justify-content: center;
 }
 
-#badges {
+#skills #badges {
   margin-top: 20px;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   justify-items: center;
+}
+
+#skills #badges img {
+  height: 40px;
+}
+
+#skills #badges img:nth-child(9) {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+#skills #badges img:nth-child(10) {
+  grid-area: 3 / 3 / span 1 / span 1;
 }
 
 #resume {
@@ -156,113 +169,284 @@ footer {
   margin-top: 20px;
 }
 
-#footer-logo {
+footer #footer-logo {
   background-image: url('./images/default-wide.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-#footer-contact {
+footer #footer-contact {
   justify-self: center;
   font-size: 0.75rem;
 }
 
+@media only screen and (min-width: 280px) {
+  #about-me .portrait-container {
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 325px) {
+  #about-me .portrait-container {
+    height: 345px;
+  }
+}
+
+@media only screen and (min-width: 380px) {
+  #about-me .portrait-container {
+    height: 410px;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  #about-me .portrait-container {
+    height: 450px;
+  }
+}
+
 @media only screen and (min-width: 500px) {
-  #menu-open {
+  nav #menu-open {
     display: none;
   }
-  #nav-menu {
+  nav #nav-menu {
     display: unset;
   }
   #about-me {
     margin-top: 20px;
   }
-  #about-me-content {
+  #about-me #about-me-content {
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: fit-content(17%) fit-content(17%) fit-content(17%) fit-content(17%) fit-content(17%) 1fr;
     justify-items: start;
   }
-  .about-me-text {
+  #about-me .about-me-text {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: minmax(auto, max-content) minmax(auto, max-content) fit-content(17%) fit-content(17%) fit-content(17%) 60px;
+    grid-template-rows: minmax(auto, max-content) minmax(auto, max-content) fit-content(17%) fit-content(17%) fit-content(17%) 1fr;
   }
-  .about-me-text p {
+  #about-me .about-me-text p {
     margin: 0 0 0.5rem 0;
   }
-  .portrait-container {
+  #about-me .portrait-container {
     margin: 0.25rem 0 0 0;
     height: 150px;
     max-width: 90%;
     grid-area: 1 / 1 / span 2 / span 2;
   }
-  .about-me-text {
+  #about-me .about-me-text {
     grid-area: 1 / 1 / span 6 / span 4;
   }
-  .about-me-text p:nth-child(1) {
+  #about-me .about-me-text p:nth-child(1) {
     grid-area: 1 / 3 / span 1 / span 2;
   }
-  .about-me-text p:nth-child(2) {
+  #about-me .about-me-text p:nth-child(2) {
     grid-area: 2 / 3 / span 1 / span 2;
   }
-  .about-me-text p:nth-child(3) {
+  #about-me .about-me-text p:nth-child(3) {
     grid-area: 3 / 1 / span 1 / span 4;
   }
-  .about-me-text p:nth-child(4) {
+  #about-me .about-me-text p:nth-child(4) {
     grid-area: 4 / 1 / span 1 / span 4;
   }
-  .about-me-text p:nth-child(5) {
+  #about-me .about-me-text p:nth-child(5) {
     grid-area: 5 / 1 / span 1 / span 4;
   }
-  .about-me-text p:nth-child(6) {
+  #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 1 / span 1 / span 4;
   }
+  #skills #badges {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  #skills #badges img:nth-child(9), #skills #badges img:nth-child(10) {
+    grid-area: unset;
+  }
 }
+
 @media only screen and (min-width: 560px) {
   #banner {
     background-image: url(./images/default-wide.svg);
   }
 }
+
 @media only screen and (min-width: 650px) {
-  .portrait-container {
-    height: 200px;
+  nav #nav-menu a {
+    font-size: 1rem;;
+  }
+  #about-me .portrait-container {
+    height: 220px;
     max-width: 90%;
     grid-area: 1 / 1 / span 3 / span 2;
   }
-  .about-me-text p:nth-child(3) {
-    grid-area: 3 / 3 / span 1 / span 2;
+  #about-me .about-me-text p {
+    font-size: 1rem;
+  }
+  #skills #badges img {
+    height: 55px;
+  }
+  footer p {
+    font-size: 1rem;
   }
 }
+
 @media only screen and (min-width: 800px) {
-  .portrait-container {
-    height: 250px;
-    max-width: 90%;
-    grid-area: 1 / 1 / span 4 / span 2;
-  }
-  .about-me-text p:nth-child(4) {
-    grid-area: 4 / 3 / span 1 / span 2;
-  }
-}
-@media only screen and (min-width: 950px) {
-  .portrait-container {
+  #about-me .portrait-container {
     height: 300px;
     max-width: 90%;
     grid-area: 1 / 1 / span 4 / span 2;
   }
-  .about-me-text p:nth-child(5) {
-    grid-area: 5 / 3 / span 1 / span 2;
+  #about-me .about-me-text p:nth-child(3) {
+    grid-area: 3 / 3 / span 1 / span 2;
+  }
+  #skills #badges {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 35px;
+  }
+  #skills #badges img:nth-child(7) {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+  #skills #badges img:nth-child(8) {
+    grid-area: 2 / 3 / span 1 / span 1;
+  }
+  #skills #badges img:nth-child(9) {
+    grid-area: 2 / 4 / span 1 / span 1;
+  }
+  #skills #badges img:nth-child(10) {
+    grid-area: 2 / 5 / span 1 / span 1;
+  }
+  footer {
+    grid-template-columns: 1fr 3fr;
   }
 }
-@media only screen and (min-width: 1100px) {
-  .portrait-container {
+
+@media only screen and (min-width: 950px) {
+  #about-me .portrait-container {
     height: 350px;
     max-width: 90%;
     grid-area: 1 / 1 / span 4 / span 2;
   }
-  .about-me-text p:nth-child(6) {
+  #about-me .about-me-text p:nth-child(4) {
+    grid-area: 4 / 3 / span 1 / span 2;
+  }
+  #skills #badges img {
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  #banner {
+    background-size: 75%;
+  }
+  #about-me .portrait-container {
+    height: 450px;
+    max-width: 90%;
+    grid-area: 1 / 1 / span 4 / span 2;
+  }
+  #about-me .about-me-text p:nth-child(5) {
+    grid-area: 5 / 3 / span 1 / span 2;
+  }
+  #skills #badges {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  #skills #badges img:nth-child(7) {
+    grid-area: unset;
+  }
+  #skills #badges img:nth-child(8) {
+    grid-area: 2 / 3 / span 1 / span 1;
+  }
+  #skills #badges img:nth-child(9) {
+    grid-area: 2 / 4 / span 1 / span 1;
+  }
+  #skills #badges img:nth-child(10) {
+    grid-area: 2 / 5 / span 1 / span 1;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 3 / span 1 / span 2;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #banner {
+    background-size: 50%;
+  }
+  nav {
+    height: 50px;
+  }
+  #about-me .portrait-container {
+    height: 450px;
+  }
+  #skills #badges {
+    grid-template-columns: repeat(10, 1fr);
+  }
+  #skills #badges img:nth-child(8), #skills #badges img:nth-child(9), #skills #badges img:nth-child(10) {
+    grid-area: unset;
+  }
+  footer {
+    grid-template-columns: 1fr 5fr;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  nav #nav-menu a {
+    font-size: 1.25rem;
+  }
+  #about-me {
+    margin-top: 3rem;
+  }
+  #about-me .about-me-text p {
+    font-size: 1.25rem;
+  }
+  #about-me .portrait-container {
+    height: 500px;
+  }
+  #about-me .about-me-text p:nth-child(6) {
+    grid-area: 6 / 1 / span 1 / span 4;
+  }
+  #skills {
+    margin-top: 3rem;
+  }
+  footer #footer-contact p {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  #about-me .portrait-container {
+    height: 550px;
+  }
+  #about-me .about-me-text p:nth-child(6) {
+    grid-area: 6 / 3 / span 1 / span 2;
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  nav {
+    height: 100px;
+  }
+  nav #nav-menu {
+    margin-left: 1.5rem;
+  }
+  nav #nav-menu a {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+  }
+  #about-me .portrait-container {
+    height: 800px;
+  }
+  #about-me .about-me-text p {
+    font-size: 1.75rem;
+  }
+  #skills #badges img {
+    height: 100px;
+  }
+  footer {
+    height: 100px;
   }
 }

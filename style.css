@@ -77,10 +77,12 @@ nav li a {
 }
 
 #about-me {
+  padding: 20px 0 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 97%));
 }
 
 #about-me-content {
@@ -103,20 +105,18 @@ nav li a {
 }
 
 #about-me .about-me-text {
-  width: 80%
-}
-
-#about-me .about-me-text p{
-  font-size: 0.75rem;;
+  width: 80%;
+  font-size: 0.75rem;
 }
 
 #skills {
+  padding: 20px 0 20px 0;
   display: flex;
   justify-content: center;
+  background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 97%));
 }
 
 #skills #badges {
-  margin-top: 20px;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -137,14 +137,31 @@ nav li a {
 }
 
 #resume {
+  padding: 20px 0 20px 0;
   display: flex;
   justify-content: center;
+  font-size: 0.75rem;
+  background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 97%));
 }
 
 #resume #resume-content {
   width: 80%;
   display: flex;
   flex-direction: column;
+}
+
+#resume ul {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+#resume h4, #resume p, #resume ul li {
+  margin: 0;
+}
+
+#resume p, #resume ul {
+  margin-bottom: 0.5rem;
 }
 
 #projects {

@@ -167,13 +167,14 @@ nav li a {
 #projects {
   display: flex;
   justify-content: center;
+  background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 97%));
 }
 
 footer {
   background-color: rgb(191, 191, 191);
   display: grid;
   grid-template-columns: 1fr 2fr;
-  margin-top: 20px;
+
 }
 
 footer #footer-logo {

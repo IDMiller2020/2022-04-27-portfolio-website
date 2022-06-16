@@ -167,7 +167,104 @@ nav li a {
 #projects {
   display: flex;
   justify-content: center;
+  padding: 20px 0 20px 0;
   background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 97%));
+}
+
+#projects p {
+  margin: 0 0 20px 0;
+}
+
+#projects #projects-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#projects .project-container {
+  margin: 0;
+  height: 115px;
+  overflow: hidden;
+  margin: 0.5rem 0 0.5rem 0;
+  border: 1px solid black;
+  position: relative;
+}
+
+#projects .project-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#projects #project-one-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+  background-color: #339c57;
+}
+
+#projects #project-one:hover #project-one-overlay {
+  opacity: 1;
+}
+
+#projects #project-two-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+  background-color: #339c57;
+}
+
+#projects #project-two:hover #project-two-overlay {
+  opacity: 1;
+}
+
+#projects .text {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#projects .fa-circle-info {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#projects .fa-arrow-up-right-from-square {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 75%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#projects .text:hover {
+  cursor: default;
 }
 
 footer {
@@ -193,24 +290,40 @@ footer #footer-contact {
   #about-me .portrait-container {
     height: 300px;
   }
+  #projects .project-container {
+    height: 130px;
+  }
+
 }
 
 @media only screen and (min-width: 325px) {
   #about-me .portrait-container {
     height: 345px;
   }
+  #projects .project-container {
+    height: 150px;
+  }
+
 }
 
 @media only screen and (min-width: 380px) {
   #about-me .portrait-container {
     height: 410px;
   }
+  #projects .project-container {
+    height: 175px;
+  }
+
 }
 
 @media only screen and (min-width: 420px) {
   #about-me .portrait-container {
     height: 450px;
   }
+  #projects .project-container {
+    height: 192px;
+  }
+
 }
 
 @media only screen and (min-width: 500px) {
@@ -241,7 +354,7 @@ footer #footer-contact {
   }
   #about-me .portrait-container {
     margin: 0.25rem 0 0 0;
-    height: 150px;
+    height: 225px;
     max-width: 90%;
     grid-area: 1 / 1 / span 2 / span 2;
   }
@@ -273,11 +386,39 @@ footer #footer-contact {
   #skills #badges img:nth-child(9), #skills #badges img:nth-child(10) {
     grid-area: unset;
   }
+  #projects #projects-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  #projects #project-one {
+    margin: 0;
+    grid-area: 2 / 1 / span 1 / span 1;
+
+  }
+  #projects #project-two {
+    margin: 0;
+    grid-area: 2 / 2 / span 1 / span 1;
+
+  }
+
+  #projects .project-container {
+    height: 110px;
+  }
 }
 
 @media only screen and (min-width: 560px) {
   #banner {
     background-image: url(./images/default-wide.svg);
+  }
+  #about-me .portrait-container {
+    height: 190px;
+  }
+  #projects .project-container {
+    height: 125px;
+  }
+  #projects .project-container {
+    height: 125px;
   }
 }
 
@@ -286,7 +427,7 @@ footer #footer-contact {
     font-size: 1rem;;
   }
   #about-me .portrait-container {
-    height: 220px;
+    height: 275px;
     max-width: 90%;
     grid-area: 1 / 1 / span 3 / span 2;
   }
@@ -296,6 +437,10 @@ footer #footer-contact {
   #skills #badges img {
     height: 55px;
   }
+  #projects .project-container {
+    height: 145px;
+  }
+
   footer p {
     font-size: 1rem;
   }
@@ -303,7 +448,7 @@ footer #footer-contact {
 
 @media only screen and (min-width: 800px) {
   #about-me .portrait-container {
-    height: 300px;
+    height: 395px;
     max-width: 90%;
     grid-area: 1 / 1 / span 4 / span 2;
   }
@@ -326,6 +471,15 @@ footer #footer-contact {
   #skills #badges img:nth-child(10) {
     grid-area: 2 / 5 / span 1 / span 1;
   }
+  #resume #resume-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+  }
+  #projects .project-container {
+    height: 180px;
+  }
+
   footer {
     grid-template-columns: 1fr 3fr;
   }

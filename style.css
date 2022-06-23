@@ -206,7 +206,7 @@ nav li a {
   width: 100%;
   opacity: 0;
   transition: 0.7s ease;
-  background-color: #339c57;
+  background-color:hsla(227,65%,19%,1);
 }
 
 #projects #project-one:hover #project-one-overlay {
@@ -223,7 +223,7 @@ nav li a {
   width: 100%;
   opacity: 0;
   transition: 0.7s ease;
-  background-color: #339c57;
+  background-color:hsla(227,65%,19%,1);
 }
 
 #projects #project-two:hover #project-two-overlay {

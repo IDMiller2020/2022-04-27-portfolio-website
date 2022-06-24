@@ -669,6 +669,15 @@ footer #footer-contact {
   #projects .project-container {
     height: 400px;
   }
+  #projects .project-container .text {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  #projects .project-container .text {
+    font-size: 3.75rem ;
+  }
 }
 
 @media only screen and (min-width: 2500px) {

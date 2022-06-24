@@ -41,6 +41,7 @@ nav {
   top: 0px;
   background-color: white;
   box-shadow: 0 1px 5px 1px hsla(0, 0%, 50%, .5);
+  z-index: 5;
 }
 
 nav #menu-open, #menu-close, li {
@@ -232,9 +233,9 @@ nav li a {
 
 #projects .text {
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -250,7 +251,7 @@ nav li a {
   font-size: 18px;
   position: absolute;
   top: 75%;
-  left: 45%;
+  left: 40%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -265,10 +266,14 @@ nav li a {
   font-size: 18px;
   position: absolute;
   top: 75%;
-  left: 55%;
+  left: 60%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+#projects .inactive {
+  color: rgb(123, 123, 123);
 }
 
 #projects .modal {
@@ -478,7 +483,9 @@ footer #footer-contact {
   #projects .project-container {
     height: 145px;
   }
-
+  #projects .project-container .text {
+    font-size: 1.2rem;
+  }
   footer p {
     font-size: 1rem;
   }
@@ -517,7 +524,9 @@ footer #footer-contact {
   #projects .project-container {
     height: 180px;
   }
-
+  #projects .project-container .text {
+    font-size: 1.4rem;
+  }
   footer {
     grid-template-columns: 1fr 3fr;
   }
@@ -532,8 +541,17 @@ footer #footer-contact {
   #about-me .about-me-text p:nth-child(4) {
     grid-area: 4 / 3 / span 1 / span 2;
   }
+  #projects .project-container {
+    height: 210px;
+  }
+  #projects .project-container .text {
+    font-size: 1.75rem;
+  }
   #skills #badges img {
     height: 70px;
+  }
+  #resume {
+    font-size: 1rem;
   }
 }
 
@@ -564,11 +582,23 @@ footer #footer-contact {
   #skills #badges img:nth-child(10) {
     grid-area: 2 / 5 / span 1 / span 1;
   }
+  #projects .project-container {
+    height: 245px;
+  }
+  #projects .project-container .text {
+    font-size: 1.8rem;
+  }
 }
 
 @media only screen and (min-width: 1250px) {
   #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 3 / span 1 / span 2;
+  }
+  #projects .project-container {
+    height: 280px;
+  }
+  #projects .project-container .text {
+    font-size: 2.25rem;
   }
 }
 
@@ -587,6 +617,12 @@ footer #footer-contact {
   }
   #skills #badges img:nth-child(8), #skills #badges img:nth-child(9), #skills #badges img:nth-child(10) {
     grid-area: unset;
+  }
+  #projects .project-container {
+    height: 355px;
+  }
+  #projects .project-container .text {
+    font-size: 2.5rem;
   }
   footer {
     grid-template-columns: 1fr 5fr;
@@ -612,6 +648,12 @@ footer #footer-contact {
   #skills {
     margin-top: 3rem;
   }
+  #projects .project-container {
+    height: 355px;
+  }
+  #projects .project-container .text {
+    font-size: 2.75rem;
+  }
   footer #footer-contact p {
     font-size: 1.25rem;
   }
@@ -623,6 +665,9 @@ footer #footer-contact {
   }
   #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 3 / span 1 / span 2;
+  }
+  #projects .project-container {
+    height: 400px;
   }
 }
 
@@ -645,6 +690,9 @@ footer #footer-contact {
   }
   #skills #badges img {
     height: 100px;
+  }
+  #projects .project-container {
+    height: 550px;
   }
   footer {
     height: 100px;

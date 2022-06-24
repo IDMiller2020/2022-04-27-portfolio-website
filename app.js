@@ -3,9 +3,6 @@ const navClose = document.getElementById('menu-close')
 const linkClickClose = document.getElementById('nav-list')
 const navDropDownMenu = document.getElementById('drop-down-menu')
 let showMenu = false
-const modal = document.getElementById("project-one-modal");
-const btn = document.getElementById("project-one-info");
-const span = document.getElementsByClassName("close")[0];
 function toggleNavMenu () {
   showMenu = !showMenu
   if (showMenu) {
@@ -14,19 +11,40 @@ function toggleNavMenu () {
     navDropDownMenu.style.display = 'none'
   }
 }
-function showModal() {
-  modal.style.display = 'block'
-}
-function modalClose() {
-  modal.style.display = 'none'
-}
 navMenu.addEventListener('click', toggleNavMenu)
 navClose.addEventListener('click', toggleNavMenu)
-linkClickClose.addEventListener('click', toggleNavMenu);
-btn.addEventListener('click', showModal)
-span.addEventListener('click', modalClose)
+linkClickClose.addEventListener('click', toggleNavMenu)
+
+const projectOneModal = document.getElementById("project-one-modal");
+const projectOneBtn = document.getElementById("project-one-info");
+const projectOneClose = document.getElementsByClassName("close")[0];
+
+function showProjectOneModal() {
+  projectOneModal.style.display = 'block'
+}
+function projectOneModalClose() {
+  projectOneModal.style.display = 'none'
+}
+
+projectOneBtn.addEventListener('click', showProjectOneModal)
+projectOneClose.addEventListener('click', projectOneModalClose)
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == projectOneModal) {
+    projectOneModal.style.display = "none";
+  } else if (event.target == projectTwoModal) {
+    projectTwoModal.style.display = "none";
   }
 }
+const projectTwoModal = document.getElementById("project-two-modal")
+const projectTwoBtn = document.getElementById("project-two-info")
+const projectTwoClose = document.getElementsByClassName("close")[1];
+
+function showProjectTwoModal() {
+  projectTwoModal.style.display = 'block'
+}
+function projectTwoModalClose() {
+  projectTwoModal.style.display = 'none'
+}
+
+projectTwoBtn.addEventListener('click', showProjectTwoModal)
+projectTwoClose.addEventListener('click', projectTwoModalClose)

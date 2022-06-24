@@ -326,7 +326,8 @@ footer #footer-logo {
 
 footer #footer-contact {
   justify-self: center;
-  font-size: 0.75rem;
+  text-align: center;
+  font-size: 0.35rem;
 }
 
 @media only screen and (min-width: 280px) {

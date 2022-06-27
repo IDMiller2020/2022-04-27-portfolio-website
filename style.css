@@ -236,7 +236,7 @@ nav li a {
   color: white;
   font-size: 1rem;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -249,10 +249,10 @@ nav li a {
 
 #projects .fa-circle-info {
   color: white;
-  font-size: 18px;
+  font-size: 1.75rem;
   position: absolute;
   top: 75%;
-  left: 40%;
+  left: 30%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
@@ -264,10 +264,10 @@ nav li a {
 
 #projects .fa-arrow-up-right-from-square {
   color: white;
-  font-size: 18px;
+  font-size: 1.75rem;
   position: absolute;
   top: 75%;
-  left: 60%;
+  left: 70%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;

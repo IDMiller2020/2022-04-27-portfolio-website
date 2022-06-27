@@ -111,6 +111,7 @@ nav li a {
 }
 
 #skills {
+  margin: 0;
   padding: 20px 0 20px 0;
   display: flex;
   justify-content: center;
@@ -205,7 +206,7 @@ nav li a {
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
+  opacity: 80%;
   transition: 0.7s ease;
   background-color:hsla(227,65%,19%,1);
 }
@@ -222,7 +223,7 @@ nav li a {
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
+  opacity: 80%;
   transition: 0.7s ease;
   background-color:hsla(227,65%,19%,1);
 }
@@ -423,6 +424,9 @@ footer #footer-contact {
   #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 1 / span 1 / span 4;
   }
+  #skills {
+    padding: 2rem 0 2rem 0;
+  }
   #skills #badges {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -445,7 +449,6 @@ footer #footer-contact {
     grid-area: 2 / 2 / span 1 / span 1;
 
   }
-
   #projects .project-container {
     height: 110px;
   }
@@ -531,6 +534,12 @@ footer #footer-contact {
   #projects .project-container .text {
     font-size: 1.4rem;
   }
+  #projects #project-one-overlay {
+    opacity: 0;
+  }
+  #projects #project-two-overlay {
+    opacity: 0;
+  }
   footer {
     grid-template-columns: 1fr 3fr;
   }
@@ -570,6 +579,9 @@ footer #footer-contact {
   }
   #about-me .about-me-text p:nth-child(5) {
     grid-area: 5 / 3 / span 1 / span 2;
+  }
+  #skills {
+    padding: 3rem 0 3rem 0;
   }
   #skills #badges {
     grid-template-columns: repeat(7, 1fr);
@@ -649,9 +661,7 @@ footer #footer-contact {
   #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 1 / span 1 / span 4;
   }
-  #skills {
-    margin-top: 3rem;
-  }
+
   #projects .project-container {
     height: 355px;
   }

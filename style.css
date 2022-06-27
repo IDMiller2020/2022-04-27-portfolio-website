@@ -412,7 +412,7 @@ footer #footer-contact {
     grid-area: 2 / 3 / span 1 / span 2;
   }
   #about-me .about-me-text p:nth-child(3) {
-    grid-area: 3 / 1 / span 1 / span 4;
+    grid-area: 3 / 3 / span 1 / span 4;
   }
   #about-me .about-me-text p:nth-child(4) {
     grid-area: 4 / 1 / span 1 / span 4;
@@ -488,7 +488,7 @@ footer #footer-contact {
     font-size: 1.2rem;
   }
   footer p {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -500,6 +500,9 @@ footer #footer-contact {
   }
   #about-me .about-me-text p:nth-child(3) {
     grid-area: 3 / 3 / span 1 / span 2;
+  }
+  #about-me .about-me-text p:nth-child(4) {
+    grid-area: 4 / 3 / span 1 / span 2;
   }
   #skills #badges {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -704,7 +707,10 @@ footer #footer-contact {
   #projects .project-container {
     height: 550px;
   }
-  footer {
+  #resume {
+    font-size: 1.5rem;
+  }
+  #footer {
     height: 100px;
   }
 }

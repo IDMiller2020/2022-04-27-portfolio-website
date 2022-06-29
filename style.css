@@ -173,8 +173,8 @@ nav li a {
   background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 97%));
 }
 
-#projects p {
-  margin: 0 0 20px 0;
+#projects h4 {
+  margin: 0 0 1rem 0;
 }
 
 #projects #projects-content {
@@ -229,6 +229,23 @@ nav li a {
 }
 
 #projects #project-two:hover #project-two-overlay {
+  opacity: 1;
+}
+
+#projects #project-three-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 80%;
+  transition: 0.7s ease;
+  background-color:hsla(227,65%,19%,1);
+}
+
+#projects #project-three:hover #project-three-overlay {
   opacity: 1;
 }
 
@@ -436,18 +453,26 @@ footer #footer-contact {
   }
   #projects #projects-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
+  }
+  #projects h4 {
+    grid-area: 1 / 1 / span 1 / span 4;
+  }
+  #projects .text {
+    font-size: 0.9rem;
   }
   #projects #project-one {
     margin: 0;
-    grid-area: 2 / 1 / span 1 / span 1;
-
+    grid-area: 2 / 1 / span 1 / span 2;
   }
   #projects #project-two {
     margin: 0;
-    grid-area: 2 / 2 / span 1 / span 1;
-
+    grid-area: 2 / 3 / span 1 / span 2;
+  }
+  #projects #project-three {
+    margin: 0;
+    grid-area: 3 / 2 / span 1 / span 2;
   }
   #projects .project-container {
     height: 110px;
@@ -462,10 +487,7 @@ footer #footer-contact {
     height: 190px;
   }
   #projects .project-container {
-    height: 125px;
-  }
-  #projects .project-container {
-    height: 125px;
+    height: 120px;
   }
 }
 
@@ -484,11 +506,26 @@ footer #footer-contact {
   #skills #badges img {
     height: 55px;
   }
+  #projects #projects-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #projects h4 {
+    grid-area: 1 / 1 / span 1 / span 3;
+  }
+  #projects #project-one {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+  #projects #project-two {
+    grid-area: 2 / 2 / span 1 / span 1;
+  }
+  #projects #project-three {
+    grid-area: 2 / 3 / span 1 / span 1;
+  }
   #projects .project-container {
-    height: 145px;
+    height: 90px;
   }
   #projects .project-container .text {
-    font-size: 1.2rem;
+    font-size: 0.75rem;
   }
   footer p {
     font-size: 0.9rem;
@@ -529,15 +566,18 @@ footer #footer-contact {
     grid-gap: 100px;
   }
   #projects .project-container {
-    height: 180px;
+    height: 115px;
   }
   #projects .project-container .text {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
   }
   #projects #project-one-overlay {
     opacity: 0;
   }
   #projects #project-two-overlay {
+    opacity: 0;
+  }
+  #projects #project-three-overlay {
     opacity: 0;
   }
   footer {
@@ -555,10 +595,10 @@ footer #footer-contact {
     grid-area: 4 / 3 / span 1 / span 2;
   }
   #projects .project-container {
-    height: 210px;
+    height: 135px;
   }
   #projects .project-container .text {
-    font-size: 1.75rem;
+    font-size: 0.8rem;
   }
   #skills #badges img {
     height: 70px;
@@ -599,10 +639,10 @@ footer #footer-contact {
     grid-area: 2 / 5 / span 1 / span 1;
   }
   #projects .project-container {
-    height: 245px;
+    height: 160px;
   }
   #projects .project-container .text {
-    font-size: 1.8rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -611,10 +651,10 @@ footer #footer-contact {
     grid-area: 6 / 3 / span 1 / span 2;
   }
   #projects .project-container {
-    height: 280px;
+    height: 180px;
   }
   #projects .project-container .text {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -634,11 +674,14 @@ footer #footer-contact {
   #skills #badges img:nth-child(8), #skills #badges img:nth-child(9), #skills #badges img:nth-child(10) {
     grid-area: unset;
   }
+  #projects h4 {
+    font-size: 1.25rem;
+  }
   #projects .project-container {
-    height: 355px;
+    height: 200px;
   }
   #projects .project-container .text {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
   }
   footer {
     grid-template-columns: 1fr 5fr;
@@ -661,12 +704,11 @@ footer #footer-contact {
   #about-me .about-me-text p:nth-child(6) {
     grid-area: 6 / 1 / span 1 / span 4;
   }
-
   #projects .project-container {
-    height: 355px;
+    height: 235px;
   }
   #projects .project-container .text {
-    font-size: 2.75rem;
+    font-size: 1.9rem;
   }
   footer #footer-contact p {
     font-size: 1.25rem;
@@ -681,16 +723,16 @@ footer #footer-contact {
     grid-area: 6 / 3 / span 1 / span 2;
   }
   #projects .project-container {
-    height: 400px;
+    height: 265px;
   }
   #projects .project-container .text {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 }
 
 @media only screen and (min-width: 2000px) {
   #projects .project-container .text {
-    font-size: 3.75rem ;
+    font-size: 2.4rem ;
   }
 }
 
@@ -715,7 +757,7 @@ footer #footer-contact {
     height: 100px;
   }
   #projects .project-container {
-    height: 550px;
+    height: 370px;
   }
   #resume {
     font-size: 1.5rem;

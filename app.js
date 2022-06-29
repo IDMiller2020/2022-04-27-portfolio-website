@@ -33,6 +33,8 @@ window.onclick = function(event) {
     projectOneModal.style.display = "none";
   } else if (event.target == projectTwoModal) {
     projectTwoModal.style.display = "none";
+  } else if (event.target == projectThreeModal) {
+    projectThreeModal.style.display = "none";
   }
 }
 const projectTwoModal = document.getElementById("project-two-modal")
@@ -48,3 +50,17 @@ function projectTwoModalClose() {
 
 projectTwoBtn.addEventListener('click', showProjectTwoModal)
 projectTwoClose.addEventListener('click', projectTwoModalClose)
+
+const projectThreeModal = document.getElementById("project-three-modal")
+const projectThreeBtn = document.getElementById("project-three-info")
+const projectThreeClose = document.getElementsByClassName("close")[2];
+
+function showProjectThreeModal() {
+  projectThreeModal.style.display = 'block'
+}
+function projectThreeModalClose() {
+  projectThreeModal.style.display = 'none'
+}
+
+projectThreeBtn.addEventListener('click', showProjectThreeModal)
+projectThreeClose.addEventListener('click', projectThreeModalClose)

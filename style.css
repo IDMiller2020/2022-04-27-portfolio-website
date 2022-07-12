@@ -511,7 +511,11 @@ footer #footer-contact {
   }
   #projects #project-three {
     margin: 0;
-    grid-area: 4 / 2 / span 1 / span 2;
+    grid-area: 4 / 1 / span 1 / span 2;
+  }
+  #projects #project-four {
+    margin: 0;
+    grid-area: 4 / 3 / span 1 / span 2;
   }
   #projects .project-container {
     height: 110px;
@@ -552,13 +556,16 @@ footer #footer-contact {
     grid-area: 1 / 1 / span 1 / span 3;
   }
   #projects #project-one {
-    grid-area: 2 / 1 / span 1 / span 1;
+    grid-area: 3 / 1 / span 1 / span 1;
   }
   #projects #project-two {
-    grid-area: 2 / 2 / span 1 / span 1;
+    grid-area: 3 / 2 / span 1 / span 1;
   }
   #projects #project-three {
-    grid-area: 2 / 3 / span 1 / span 1;
+    grid-area: 3 / 3 / span 1 / span 1;
+  }
+  #projects #project-four {
+    grid-area: 4 / 2 / span 1 / span 1;
   }
   #projects .project-container {
     height: 90px;
@@ -617,6 +624,9 @@ footer #footer-contact {
     opacity: 0;
   }
   #projects #project-three-overlay {
+    opacity: 0;
+  }
+  #projects #project-four-overlay {
     opacity: 0;
   }
   footer {

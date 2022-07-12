@@ -35,6 +35,8 @@ window.onclick = function(event) {
     projectTwoModal.style.display = "none";
   } else if (event.target == projectThreeModal) {
     projectThreeModal.style.display = "none";
+  } else if (event.target == projectFourModal) {
+    projectFourModal.style.display = "none";
   }
 }
 const projectTwoModal = document.getElementById("project-two-modal")
@@ -64,3 +66,17 @@ function projectThreeModalClose() {
 
 projectThreeBtn.addEventListener('click', showProjectThreeModal)
 projectThreeClose.addEventListener('click', projectThreeModalClose)
+
+const projectFourModal = document.getElementById("project-four-modal")
+const projectFourBtn = document.getElementById("project-four-info")
+const projectFourClose = document.getElementsByClassName("close")[3];
+
+function showProjectFourModal() {
+  projectFourModal.style.display = 'block'
+}
+function projectFourModalClose() {
+  projectFourModal.style.display = 'none'
+}
+
+projectFourBtn.addEventListener('click', showProjectFourModal)
+projectFourClose.addEventListener('click', projectFourModalClose)

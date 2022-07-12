@@ -174,7 +174,12 @@ nav li a {
 }
 
 #projects h4 {
-  margin: 0 0 1rem 0;
+  margin: 0;
+}
+
+#projects p {
+  margin: 0;
+  font-size: 0.75rem;
 }
 
 #projects #projects-content {
@@ -246,6 +251,23 @@ nav li a {
 }
 
 #projects #project-three:hover #project-three-overlay {
+  opacity: 1;
+}
+
+#projects #project-four-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 80%;
+  transition: 0.7s ease;
+  background-color:hsla(227,65%,19%,1);
+}
+
+#projects #project-four:hover #project-four-overlay {
   opacity: 1;
 }
 
@@ -372,10 +394,22 @@ footer #footer-contact {
   #about-me .portrait-container {
     height: 410px;
   }
+  #projects {
+    padding: 10 0 10 0;
+  }
+  #projects #projects-content p {
+    margin: 0 0 20px 0;
+  }
   #projects .project-container {
+    margin: 0 0 20px 0;
     height: 175px;
   }
-
+  #resume {
+    padding: 40px 0 40px 0;
+  }
+  #skills {
+    padding: 40px 0 40px 0;
+  }
 }
 
 @media only screen and (min-width: 420px) {
@@ -456,23 +490,28 @@ footer #footer-contact {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
   }
-  #projects h4 {
-    grid-area: 1 / 1 / span 1 / span 4;
-  }
   #projects .text {
     font-size: 0.9rem;
   }
+  #projects #projects-content h4 {
+    margin: 0;
+    grid-area: 1 / 1 / span 1 / span 4;
+  }
+  #projects #projects-content p {
+    margin: 0;
+    grid-area: 2 / 1 / span 1 / span 4;
+  }
   #projects #project-one {
     margin: 0;
-    grid-area: 2 / 1 / span 1 / span 2;
+    grid-area: 3 / 1 / span 1 / span 2;
   }
   #projects #project-two {
     margin: 0;
-    grid-area: 2 / 3 / span 1 / span 2;
+    grid-area: 3 / 3 / span 1 / span 2;
   }
   #projects #project-three {
     margin: 0;
-    grid-area: 3 / 2 / span 1 / span 2;
+    grid-area: 4 / 2 / span 1 / span 2;
   }
   #projects .project-container {
     height: 110px;
